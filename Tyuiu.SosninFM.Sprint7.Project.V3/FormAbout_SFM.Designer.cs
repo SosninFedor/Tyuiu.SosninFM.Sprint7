@@ -1,6 +1,6 @@
 ﻿namespace Tyuiu.SosninFM.Sprint7.Project.V3
 {
-	partial class FormAbout
+	partial class FormAbout_SFM
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -20,26 +20,8 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows Form Designer generated code
-
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-			SuspendLayout();
-			// 
-			// FormAbout
-			// 
-			AutoScaleDimensions = new SizeF(13F, 32F);
-			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1799, 1070);
-			Name = "FormAbout";
-			Text = "FormAbout";
-			ResumeLayout(false);
-		}
-
-		#endregion
+		private TextBox textBoxAboutMe_SFM;
+		private Button buttonAboutMe_SFM;
+		private PictureBox pictureBoxAboutMe_SFM;
 	}
 }

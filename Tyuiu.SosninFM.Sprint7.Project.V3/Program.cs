@@ -1,9 +1,12 @@
+using System;
+using System.Windows.Forms;
+
 namespace Tyuiu.SosninFM.Sprint7.Project.V3
 {
 	internal static class Program
 	{
 		/// <summary>
-		///  The main entry point for the application.
+		/// The main entry point for the application.
 		/// </summary>
 		[STAThread]
 		static void Main()
@@ -11,7 +14,10 @@ namespace Tyuiu.SosninFM.Sprint7.Project.V3
 			// To customize application configuration such as set high DPI settings or default font,
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
-			Application.Run(new FormMain());
+			Application.SetHighDpiMode(HighDpiMode.SystemAware);
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.Run(new FormMain_SFM());
 		}
 	}
 }

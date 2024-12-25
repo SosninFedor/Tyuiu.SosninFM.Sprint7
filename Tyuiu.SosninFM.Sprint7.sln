@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.SosninFM.Sprint7.Proj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.SosninFM.Sprint7.Project.V3.Test", "Tyuiu.SosninFM.Sprint7.Project.V3.Test\Tyuiu.SosninFM.Sprint7.Project.V3.Test.csproj", "{70C995D9-1869-4203-BCFD-3F74CF8E2BAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.SosninFM.Sprint7.Project.V3", "Tyuiu.SosninFM.Sprint7.Project.V3\Tyuiu.SosninFM.Sprint7.Project.V3.csproj", "{BD76EA5F-4CDA-4AEB-BD86-E140D2DF92E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.SosninFM.Sprint7.Project.V3", "Tyuiu.SosninFM.Sprint7.Project.V3\Tyuiu.SosninFM.Sprint7.Project.V3.csproj", "{B866D331-984A-442D-BC75-A06CFB386356}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,10 @@ Global
 		{70C995D9-1869-4203-BCFD-3F74CF8E2BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70C995D9-1869-4203-BCFD-3F74CF8E2BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70C995D9-1869-4203-BCFD-3F74CF8E2BAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD76EA5F-4CDA-4AEB-BD86-E140D2DF92E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD76EA5F-4CDA-4AEB-BD86-E140D2DF92E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD76EA5F-4CDA-4AEB-BD86-E140D2DF92E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD76EA5F-4CDA-4AEB-BD86-E140D2DF92E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B866D331-984A-442D-BC75-A06CFB386356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B866D331-984A-442D-BC75-A06CFB386356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B866D331-984A-442D-BC75-A06CFB386356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B866D331-984A-442D-BC75-A06CFB386356}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +36,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0A2F6244-D5E3-4ACE-BE3A-CAAFF0804684} = {BA3F221B-E165-4B86-B6C1-48B73F01CE29}
 		{70C995D9-1869-4203-BCFD-3F74CF8E2BAD} = {BA3F221B-E165-4B86-B6C1-48B73F01CE29}
-		{BD76EA5F-4CDA-4AEB-BD86-E140D2DF92E2} = {BA3F221B-E165-4B86-B6C1-48B73F01CE29}
+		{B866D331-984A-442D-BC75-A06CFB386356} = {BA3F221B-E165-4B86-B6C1-48B73F01CE29}
 	EndGlobalSection
 EndGlobal

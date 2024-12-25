@@ -1,4 +1,4 @@
-﻿using System.Text;
+﻿using System;
 using System.IO;
 
 namespace Tyuiu.SosninFM.Sprint7.Project.V3.Lib
@@ -8,66 +8,66 @@ namespace Tyuiu.SosninFM.Sprint7.Project.V3.Lib
 		public string[,] LoadFromDataFile(string path)
 		{
 			string[] str = File.ReadAllLines(path);
-
-			//определение количества столбцов и строк
 			int columns = str[0].Split(';').Length;
 			int rows = str.Length;
-
 			string[,] matrix = new string[rows, columns];
 
 			for (int i = 0; i < str.Length; i++)
 			{
 				string strIndexI = str[i];
-				string[] strArr = strIndexI.Split(';');
+				string[] strArr = strIndexI.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
 				for (int c = 0; c < strArr.Length; c++)
 				{
-					matrix[i, c] = strArr[c];
+					matrix[i, c] = strArr[c].Trim();
 				}
 			}
 			return matrix;
 		}
 
-		public int MIN(string[,] matrix, int id)
+		public string GetStatisticsBySurname(string[,] matrix, string surname)
 		{
-
-			int min = int.MaxValue;
-			for (int i = 0; i < matrix.GetLength(1) - 1; i++)
+			for (int i = 1; i < matrix.GetLength(0); i++) // Start from 1 to skip headers
 			{
-				for (int j = 0; j < matrix.GetLength(1); j++)
+				string fullName = matrix[i, 0].Trim();
+				string[] nameParts = fullName.Split(' ');
+				if (nameParts.Length > 1 && nameParts[0].Contains(surname))
 				{
-					if (j == id)
+					// Ensure the indices are within the bounds of the array
+					if (matrix.GetLength(1) > 2)
 					{
-
-						if (Convert.ToInt32(matrix[i, j]) < min)
-						{
-							min = Convert.ToInt32(matrix[i, j]);
-						}
+						return $"{fullName}, {matrix[i, 1]}, {matrix[i, 2]}";
+					}
+					else
+					{
+						return "Неверный формат данных.";
 					}
 				}
 			}
-			return min;
+			return "Нет совпадений.";
 		}
 
-		public int MAX(string[,] matrix, int id)
+		public (string[], int[], int[]) GetAllStatistics(string[,] matrix)
 		{
-			int max = int.MinValue;
-			for (int i = 0; i < matrix.GetLength(0) - 1; i++)
-			{
-				for (int j = 0; j < matrix.GetLength(0); j++)
-				{
-					if (j == id)
-					{
+			int rows = matrix.GetLength(0);
+			string[] names = new string[rows - 1]; // Skip the header row
+			int[] experiences = new int[rows - 1];
+			int[] statistics = new int[rows - 1];
 
-						if (Convert.ToInt32(matrix[i, j]) > max)
-						{
-							max = Convert.ToInt32(matrix[i, j]);
-						}
-					}
+			for (int i = 1; i < rows; i++) // Start from 1 to skip headers
+			{
+				if (matrix.GetLength(1) > 2)
+				{
+					names[i - 1] = matrix[i, 0]; // Name
+					experiences[i - 1] = int.Parse(matrix[i, 1]); // Experience
+					statistics[i - 1] = matrix[i, 2].Contains("высшей") ? 1 : 0; // Statistics
+				}
+				else
+				{
+					return (new string[0], new int[0], new int[0]); // Return empty arrays if the format is incorrect
 				}
 			}
-			return max;
+
+			return (names, experiences, statistics);
 		}
-
-
 	}
 }
