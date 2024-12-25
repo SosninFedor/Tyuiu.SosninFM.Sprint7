@@ -2,8 +2,7 @@
 {
 	partial class FormMain_SFM
 	{
-		private System.ComponentModel.IContainer components = null;
-		private Button buttonHelp_SFM;
+		private System.ComponentModel.IContainer components = null;	
 		private ToolTip toolTipHelp;
 		private ListBox listBoxResult_SFM;
 		private Button buttonSearch_SFM;
@@ -40,7 +39,7 @@
 			// buttonHelp_SFM
 			buttonHelp_SFM.BackColor = System.Drawing.Color.White;
 			buttonHelp_SFM.Location = new System.Drawing.Point(1521, 8);
-			buttonHelp_SFM.Margin = new Padding(3, 2, 3, 2);
+				buttonHelp_SFM.Margin = new Padding(3, 2, 3, 2);
 			buttonHelp_SFM.Name = "buttonHelp_SFM";
 			buttonHelp_SFM.Size = new System.Drawing.Size(70, 59);
 			buttonHelp_SFM.TabIndex = 0;
