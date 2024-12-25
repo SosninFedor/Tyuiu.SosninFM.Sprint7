@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.SosninFM.Sprint7.Project.V3.Lib\Tyuiu.SosninFM.Sprint7.Project.V3.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
