@@ -1,4 +1,8 @@
-﻿namespace Tyuiu.SosninFM.Sprint7.Project.V3
+﻿
+using System.Windows.Forms.DataVisualization.Charting;
+using Tyuiu.SosninFM.Sprint7.Project.V3.Lib;
+
+namespace Tyuiu.SosninFM.Sprint7.Project.V3
 {
 	partial class FormMain_SFM
 	{
